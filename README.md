@@ -1,5 +1,5 @@
 
-#Intro
+### Intro
 
 This is a multiplatform project developed with the Kotlin 1.3.0-rc-146 Gradle plugin for IntelliJ. So will only need minor updates once Kotlin 1.3 is released. Many Kotlin developers have been struggling with multiplatform Kotlin used with React and Webpack. I created this starter to help with that.
 
@@ -9,7 +9,7 @@ I have left the multiplatform sample files so that you can still see examples of
 
 I haven't added any frameworks for the JVM side of things, so that is open to whatever you would like to use.
 
-#Kotlin/JS Module
+### Kotlin/JS Module
 
 First run:
 > npm install
