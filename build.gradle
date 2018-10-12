@@ -1,0 +1,70 @@
+plugins {
+    id 'kotlin-multiplatform' version '1.3.0-rc-146'
+}
+apply plugin: 'kotlin-dce-js' //apply the dce plugin which gets rid of dead code in kotlin
+
+repositories {
+    maven { url 'http://dl.bintray.com/kotlin/kotlinx.html' }
+    maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
+    maven { url 'http://dl.bintray.com/kotlin/kotlin-js-wrappers' }
+    maven { url 'http://dl.bintray.com/kotlin/kotlinx' }
+    mavenCentral()
+}
+
+
+
+kotlin {
+    
+    targets {
+        fromPreset(presets.jvm, 'jvm')
+        
+        
+        configure(fromPreset(presets.js, 'js')) { //needed to configure the JS target
+            tasks.getByName(compilations.main.compileKotlinTaskName).kotlinOptions {
+                sourceMap = true //create source maps for js files
+                sourceMapEmbedSources = "always" //embed the kotlin files into the sourcemaps for viewing in the browser
+                moduleKind = 'commonjs' //module type to be loaded by webpack
+            }
+        }
+    }
+    
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-test-common'
+                implementation 'org.jetbrains.kotlin:kotlin-test-annotations-common'
+            }
+        }
+        jvmMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+            }
+        }
+        jvmTest {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-test'
+                implementation 'org.jetbrains.kotlin:kotlin-test-junit'
+            }
+        }
+        jsMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-js'
+                implementation 'org.jetbrains:kotlin-react:16.5.2-pre.55-kotlin-1.2.71'
+                implementation 'org.jetbrains:kotlin-react-dom:16.5.2-pre.55-kotlin-1.2.71'
+                implementation 'org.jetbrains:kotlin-react-router-dom:4.3.1-pre.55-kotlin-1.2.71'
+            }
+        }
+        jsTest {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-test-js'
+            }
+        }
+    }
+
+    
+}
