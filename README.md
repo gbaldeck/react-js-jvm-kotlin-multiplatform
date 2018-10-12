@@ -25,4 +25,4 @@ For production build do:
 
 While the dev server is running you can run the `runDceJsKotlin` gradle task and it will automatically pick up the emitted Kotlin/JS files.
 
-The builds include JS source maps for the Kotlin/JS files as well. So you can setup a run configuration in IntelliJ to debug in the IDE or you can debug in dev tools, whichever you prefer.
+The builds include JS source maps for the Kotlin/JS files as well. So you can setup a run configuration in IntelliJ to debug in the IDE or you can debug in your favorite browser's dev tools, whichever you prefer.
