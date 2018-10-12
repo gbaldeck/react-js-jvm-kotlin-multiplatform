@@ -5,7 +5,7 @@ This is a multiplatform project developed with the Kotlin 1.3.0-rc-146 Gradle pl
 
 It is setup with custom webpack configuration files (webpack.common.js, webpack.dev.js, webpack.prod.js) that I have commented for better understanding of what the config files do. I have also commented some of build.gradle.
 
-I have left the multiplatform sample files so that you can still see examples of how to do multiplatform development.
+There is a working React component setup for you to build off of and I have left the multiplatform sample files so that you can still see examples of how to do multiplatform development.
 
 I haven't added any frameworks for the JVM side of things, so that is open to whatever you would like to use.
 
