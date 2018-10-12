@@ -34,6 +34,6 @@ module.exports = merge(common, {
             [{ from: 'src/jsMain/public', to: '', ignore: [ '*.html' ], force: false }],//"to" is '' because it already knows where to output based on content directory
             { copyUnmodified: false }
         ),
-        new WriteFileWebpackPlugin() //makes webpack write the bundles to the file system
+        new WriteFileWebpackPlugin() //makes webpack dev-server write the bundles to the file system
     ]
 });
