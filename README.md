@@ -20,6 +20,8 @@ Then the Gradle task:
 Then for webpack dev-server do:
 > npm run serve
 
+Once it's running you can view it in the browser by going to `localhost:9000`
+
 For production build do:
 > npm run prod-build
 
