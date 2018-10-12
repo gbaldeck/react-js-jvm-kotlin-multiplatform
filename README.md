@@ -1,7 +1,7 @@
 
 ## Intro
 
-This is a multiplatform project developed with the Kotlin 1.3.0-rc-146 Gradle plugin for IntelliJ, but you can use whatever IDE you would like since it comes with the gradle wrapper. Also, since this is build with the Kotlin 1.3 Release Candidate, it will only need minor updates once Kotlin 1.3 is released. I created this starter to help Kotlin developers with multiplatform Kotlin JS/JVM used with React and Webpack.
+This is a multiplatform project developed with the Kotlin 1.3.0-rc-146 Gradle plugin for IntelliJ, but you can use whatever IDE you would like since it comes with the gradle wrapper. Also, since this is build with the Kotlin 1.3 Release Candidate, it will only need minor updates once Kotlin 1.3 is released. I created this starter to help Kotlin developers with multiplatform Kotlin JS/JVM used with the Kotlin React wrapper and Webpack.
 
 It is setup with custom webpack configuration files (webpack.common.js, webpack.dev.js, webpack.prod.js) that I have commented for better understanding of what the config files do. I have also commented some of build.gradle.
 
