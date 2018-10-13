@@ -11,7 +11,7 @@ I haven't added any frameworks for the JVM side of things, so that is open to wh
 
 ## Kotlin/JS Module
 
-First run:
+First, run:
 > npm install
 
 Then the Gradle task:
